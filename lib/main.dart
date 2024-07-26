@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pingpt/presentation/views/ova_task_screen.dart';
+import 'package:pingpt/presentation/viewmodels/pagination_demo_viewmodel.dart';
+import 'package:pingpt/presentation/views/chat_page_with_pagination.dart';
 import 'package:provider/provider.dart';
 import 'package:pingpt/core/services/service_locator.dart' as di;
 import 'package:pingpt/core/utils/styles.dart';
@@ -21,12 +22,15 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => di.sl<ChatViewModel>(),
         ),
+        ChangeNotifierProvider(
+          create: (_) => di.sl<PaginationDemoViewModel>(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'PinGPT',
         theme: AppTheme.lightTheme,
-        home: const OvaTaskScreen(),
+        home: const PaginationChatScreen(),
       ),
     );
   }
