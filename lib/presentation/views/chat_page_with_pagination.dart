@@ -50,7 +50,7 @@ class _PaginationChatScreenState extends State<PaginationChatScreen> {
 
   void _onScroll() {
     if (_scrollController.position.pixels >=
-        _scrollController.position.maxScrollExtent - 500) {
+        _scrollController.position.maxScrollExtent - 200) {
       _fetchMoreMessages();
     }
   }
