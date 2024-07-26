@@ -22,9 +22,6 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => di.sl<ChatViewModel>(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => di.sl<PaginationDemoViewModel>(),
-        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
